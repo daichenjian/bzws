@@ -1,0 +1,113 @@
+{% extends "layout.html" %}
+{% block body%}
+{{ uid }}
+<br>
+{{ token }}
+<br>
+
+
+
+
+<table>
+    <tr>
+        <td>
+            <form action="{{url_for('update')}}">
+            <input type=submit value=更新信息 style=width:90px>
+            </form>
+        </td>
+        <td>
+            <form action="{{url_for('levy')}}">
+            <input type=submit value=征收 style=width:90px>
+            </form>
+        </td>
+        <td>
+            <form action="{{url_for('vipwage')}}">
+            <input type=submit value=vip奖励 style=width:90px>
+            </form>
+        </td>
+    </tr>
+    
+    <tr>
+        <td>
+            <form action="{{url_for('land')}}">
+            <input type=submit value=金银洞 style=width:90px>
+            </form>
+        </td>
+        <td>
+            <form action="{{url_for('get_drink')}}">
+            <input type=submit value=对酒 style=width:90px>
+            </form>
+        </td>
+        <td>
+            <form action="{{url_for('get_business')}}">
+            <input type=submit value=跑商 style=width:90px>
+            </form>
+        </td>
+    </tr>
+    
+    <tr>
+        <td>
+            <form action="{{url_for('get_lottery')}}">
+            <input type=submit value=抽奖 style=width:90px>
+            </form>
+        </td>
+        <td>
+            <form action="{{url_for('get_hitegg')}}">
+            <input type=submit value=砸蛋 style=width:90px>
+            </form>
+        </td>
+        <td>
+            <form action="{{url_for('get_sixiang')}}">
+            <input type=submit value=四象 style=width:90px>
+            </form>
+        </td>
+    </tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl>
+<dt>元宝
+{{infolist['gold']}}
+<dt>军令
+{{infolist['act']}}
+<dt>银币
+{{infolist['silver']}}
+<dt>征收
+{{infolist['levy']}}
+</dl>
+</lt>
+{%endblock%}
